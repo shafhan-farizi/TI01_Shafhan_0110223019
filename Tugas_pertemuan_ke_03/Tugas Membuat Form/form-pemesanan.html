@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form pemesanan barang</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        table td {
+            padding: 5px 0;
+        }
+        button:hover {
+            background-color: #42f568;
+            color: #000;
+        }
+        button:active {
+            transform: scale(.8);
+        }
+    </style>
+</head>
+
+<body style="font-size: 20px;background-color: #b6b8ba;">
+    <div class="container" style="width: 70vw;margin: 25px auto;">
+        <nav style="width: 100%;height: 80px;background-color: #fff;">
+            <ul style="list-style-type: none;height: 100%;border: 3px solid black;box-sizing: border-box;display: flex;justify-content: space-around;align-items: center;">
+                <li>Home</li>
+                <li>|</li>
+                <li>Generate Link</li>
+                <li>|</li>
+                <li>Transaction History</li>
+                <li>|</li>
+                <li>Policy</li>
+                <li>|</li>
+                <li>Logout</li>
+            </ul>
+        </nav>
+        <form action="pemesanan.html" method="post" enctype="multipart/form-data">
+            <div class="content" style="display: flex;margin: 15px;">
+                <div class="image-display" style="flex-basis: 35%;">
+                    <div class="img">
+                        <img src="images/upload photo1.png" alt="">
+                    </div>
+                    <div class="Upload">
+                        <input style="width: 100%;padding: 8px 5px;" type="file" name="file-upload">
+                    </div>
+                </div>
+                <div class="description-product" style="flex-basis: 65%;">
+                    <table>
+                        <tr>
+                            <td>Title Here :</td>
+                            <td>
+                                <input style="width: 100%;padding: 8px 5px;" type="text" name="name" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Desctription :</td>
+                            <td>
+                                <textarea style="width: 100%;padding: 8px 5px;" name="description" id="" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Account Number :</td>
+                            <td>
+                                <input style="width: 100%;padding: 8px 5px;" type="number" name="account-number" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bank :</td>
+                            <td>
+                                <select name="bank" id="">
+                                    <option selected disabled>-- select an optiont --</option>
+                                    <option value="BRI">BRI</option>
+                                    <option value="BSI">BSI</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="Mandiri">Mandiri</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Account Holder :</td>
+                            <td>
+                                <input style="width: 100%;padding: 8px 5px;" type="text" name="account-holder" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Transaction</td>
+                            <td>
+                                <input style="width: 100%;padding: 8px 5px;" type="number" name="transaction" id="" max="3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <p>*if the transaction is for 3 person, choose 3 from the drop-down list</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label>
+                                    <input style="width: 100%;padding: 8px 5px;" type="checkbox" name="send-mobile" id="">Send to Mobile Phone
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <label>
+                                    <input style="width: 100%;padding: 8px 5px;" type="checkbox" name="send-email" id="">Send to Email
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Send to Mobile Phone</td>
+                            <td>
+                                <input style="width: 100%;padding: 8px 5px;" type="number" name="phone-number" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Send to Email</td>
+                            <td>
+                                <input style="width: 100%;padding: 8px 5px;" type="email" name="email" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="submit" style="height: 40px;width: 300px;margin: auto;border: 1px solid black;background-color: #00a824;box-shadow: 3px 3px #000;font-weight: bold;color: #fff;transition: transform .8s, background-color .3s;">Generate Nabr Link</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

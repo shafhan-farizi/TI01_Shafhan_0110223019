@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form pemesanan pizza</title>
+    <style>
+        form .identity {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        .radio {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio input {
+            display: none;
+        }
+
+        .radio span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+
+        .radio .crust-span {
+            border-radius: 50%;
+        }
+
+        .radio input:checked + span {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body style="font-size: 20px;">
+    <h1 style="font-size: 45px;">Black Goose Bistro | Pizza-on-demand</h1>
+    <p>Our 12" wood fired pizza are available for delivery. Build your custom pizza and we'll deliver it within an hour.
+    </p>
+    <form action="http://blackgoosebistro.com/pizza.php" method="post">
+        <fieldset>
+            <legend><h1>Your Information</h1></legend>
+            <label class="identity">Name: <input type="text"  ="customername" id=""></label>
+            <label class="identity">Address: <input type="text" name="address" id=""></label>
+            <label class="identity">Telephone Number: <input type="number" name="telephone" id=""></label>
+            <label class="identity">Email: <input type="email" name="email" id=""></label>
+            <p>Delivery instruction:</p>
+            <textarea name="instructions" cols="80" rows="5"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend><h1>Design Your Dream Pizza:</h1></legend>
+            <p>Pizza specs</p>
+            <p>Crust (Choose one)</p>
+            <ul>
+                <li>
+                    <label class="radio">
+                        <input type="radio" name="crust" id="" value="Classic White">
+                        <span class="crust-span">( )</span> Classic white
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="radio" name="crust" id="" value="Multigrain">
+                        <span class="crust-span">( )</span> Multigrain
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="radio" name="crust" id="" value="Cheese-stuffed crust">
+                        <span class="crust-span">( )</span> Cheese-stuffed crust
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="radio" name="crust" id="" value="Gluten-free">
+                        <span class="crust-span">( )</span> Gluten-free
+                    </label>
+                </li>
+            </ul>
+            <p>Toppings (Choose as many as you want):</p>
+            <ul>
+                <li>
+                    <label class="radio">
+                        <input type="checkbox" name="toppings[]" id="" value="Red Sauce">
+                        <span class="toppings-span">[ ]</span> Red sauce
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="checkbox" name="toppings[]" id="" value="White Sauce">
+                        <span class="toppings-span">[ ]</span> White sauce
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="checkbox" name="toppings[]" id="" value="Mozzarella Cheese">
+                        <span class="toppings-span">[ ]</span> Mozzarella Cheese
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="checkbox" name="toppings[]" id="" value="Pepperoni">
+                        <span class="toppings-span">[ ]</span> Pepperoni
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="checkbox" name="toppings[]" id="" value="Mushrooms">
+                        <span class="toppings-span">[ ]</span> Mushrooms
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="checkbox" name="toppings[]" id="" value="Peppers">
+                        <span class="toppings-span">[ ]</span> Peppers
+                    </label>
+                </li>
+                <li>
+                    <label class="radio">
+                        <input type="checkbox" name="toppings[]" id="" value="Anchovies">
+                        <span class="toppings-span">[ ]</span> Anchovies
+                    </label>
+                </li>
+            </ul>
+            <label>How many pizza(s):</label>
+            <select name="pizzas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </fieldset>
+        <div class="button" style="margin: 20px 0;">
+            <button type="submit">Bring me a pizza!</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+
+</html>
