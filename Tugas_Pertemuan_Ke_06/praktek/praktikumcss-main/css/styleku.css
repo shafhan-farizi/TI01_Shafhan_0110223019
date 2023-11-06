@@ -1,0 +1,71 @@
+body {
+
+    /* margin: 20px auto; */
+    background-color: #f5f5dd;
+}
+ul {
+    list-style-type: none;
+}
+#header {
+    background-color: #deb887;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#header h1 {
+    color: blue;
+}
+#header blockquote {
+    background-color: #fed700;
+    border-left: 1px dashed black;
+    border-top: 1px dashed black;
+}
+#link ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ul li, .gambar img {
+    margin-right: 10px;
+}
+.gambar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.jawa {
+    font-size: 70px;
+    color: blue;
+}
+#profil h3, #beternak h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+#profil ul, #beternak ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-position: inside;
+}
+#beternak h4 {
+    display: inline-block;
+}
+#profil li {
+    flex: 0 1 75%;
+}
+#beternak li {
+    flex: 0 0 calc(50% - 60px);
+}
+#profil li, #beternak li {
+    padding: 20px;
+    box-shadow: 5px 5px 20px -6px black;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.koleksi {
+    display: flex;
+    justify-content: space-between;
+}
+.promo {
+    text-align: center;
+    list-style-position: inside;
+}
