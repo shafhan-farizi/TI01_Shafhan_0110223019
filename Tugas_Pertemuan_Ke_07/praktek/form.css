@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: black;
+    padding: 20px 100px;
+}
+.navbar a {
+    color: #ccc;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.text-tittle {
+    font-size: 20px !important;
+}
+h1 {
+    text-align: center;
+    font-weight: 100;
+}
+table {
+    margin: 20px auto;
+}
+input, select {
+    height: 20px;
+}
+input, select, textarea {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+td {
+    padding: 6px;
+}
+label {
+    text-align: right;
+    display: block;
+    font-size: 14px;
+}
+button {
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+}
+.btn-blue {
+    background-color: cornflowerblue;
+}
+.btn-red {
+    background-color: crimson;
+}
