@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" type="text/css">
+    <style>
+        
+        body {
+            padding: 0;margin: 0;
+            background-color: #eee;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            font-family: 'Rubik', sans-serif;
+            box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+            background-attachment: fixed;
+
+        }
+        form {
+            padding: 25px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+        }
+        tr > td:nth-child(1) {
+            text-align: right;
+        }
+        tr > td:nth-child(2) {
+            width: 80%;
+        }
+        td {
+            padding: 8px;
+        }
+        td#deskripsi_kebutuhan {
+            vertical-align: top;
+        }
+        #nama-pemesan, textarea {
+            width: 80%;
+            padding: 10px;
+        }
+        #request-montir, select, input:not([type="text"]) {
+            padding: 10px;
+            width: 300px;
+        }
+        .kategori-peminjam {
+            width: 20px !important;
+        }
+        button {
+            height: 40px;
+            width: 100px;
+            box-shadow: 5px 5px #333;
+        }
+        button:active {
+            transform: translate(3px, 3px);
+            box-shadow: 2px 2px #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Booking Service</legend>
+            <form action="test.php" method="get">
+                <table>
+                    <tr>
+                        <td>Jenis Kendaraan</td>
+                        <td>
+                            <select name="jenis_kendaraan">
+                                <option disabled selected>- Pilih Jenis Kendaraan -</option>
+                                <option value="mobil">Mobil</option>
+                                <option value="motor">Motor</option>
+                                <option value="minibus">MiniBus</option>
+                                <option value="kereta">Kereta</option>
+                                <option value="angin_kinton">Angin Kinton</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nama Pemesan</td>
+                        <td>
+                            <input type="text" name="nama_pemesan" id="nama-pemesan">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kategori Peminjam :</td>
+                        <td>
+                            <label>
+                                <input type="radio" name="kategori_peminjam" class="kategori-peminjam" value="pribadi"> Pribadi
+                            </label>
+                            <label>
+                                <input type="radio" name="kategori_peminjam" class="kategori-peminjam" value="perusahaan/organisasi"> Perusahaan/Organisasi
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="deskripsi_kebutuhan">Deskripsi Kebutuhan</td>
+                        <td>
+                            <textarea name="deskripsi_kebutuhan" rows="3"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jam, Tanggal Service</td>
+                        <td>
+                            <input type="date" name="tanggal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Request Montir</td>
+                        <td>
+                            <input type="text" name="request_montir" id="request-montir">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Telpon/HP :</td>
+                        <td>
+                            <input type="number" name="telpon">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <input type="email" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Submit</button>
+                        </td>
+                        <td>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
