@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas FlexBox</title>
+    <style>
+        * {
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            font-weight: bold;
+        }
+        nav {
+            flex-basis: 200px;
+            background-color: #ffc0cb;
+        }
+        .right-side {
+            flex-grow: 1;
+        }
+        header, footer {
+            background-color: #f0e68c;
+            height: 10vh;
+        }
+        .content {
+            display: flex;
+            height: 80vh;
+        }
+        article {
+            flex-grow: 1;
+        }
+        aside {
+            flex-basis: 250px;
+            background-color: #03dac5;
+        }
+        nav,header,article,aside,footer {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>Nav</nav>
+    <div class="right-side">
+        <header>Header</header>
+        <div class="content">
+            <article>Article</article>
+            <aside>Aside</aside>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
