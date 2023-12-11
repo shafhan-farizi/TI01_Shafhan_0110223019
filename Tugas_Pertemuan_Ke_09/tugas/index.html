@@ -105,19 +105,14 @@
         </li>
       </ol>
     </nav>
-    <div
-      id="carouselExampleInterval"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner" style="position: relative">
-        <div
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" style="position: relative;">
+      <div
           class="text-header border-5"
           style="
             position: absolute;
             top: 150px;
             left: 50px;
-            z-index: 1;
+            z-index: 2;
             background-color: rgba(0, 0, 0, 0.4);
             -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
@@ -129,31 +124,28 @@
           <p>Meningkatkan maskulinitas dan feminitas secara signifikan.</p>
           <a href="#rekomendasi" class="btn btn-primary">Pesan Sekarang!</a>
         </div>
-        <div class="carousel-item active" data-bs-interval="4000">
-          <img
-            src="https://i.pinimg.com/564x/e1/7a/38/e17a38dae539b7ccf11b87cc05a930d2.jpg"
-            class="d-block w-100"
-            height="500px"
-            style="object-fit: cover"
-          />
+        
+        
+        
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.pinimg.com/564x/e1/7a/38/e17a38dae539b7ccf11b87cc05a930d2.jpg" style="height: 550px;object-fit: cover; object-position: right;" class="d-block w-100">
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img
-            src="https://i.pinimg.com/564x/32/1e/93/321e93b38978306e4c37d5a8dbe94821.jpg"
-            class="d-block w-100"
-            height="500px"
-            style="object-fit: cover"
-          />
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/564x/32/1e/93/321e93b38978306e4c37d5a8dbe94821.jpg" style="height: 550px;object-fit: cover; object-position: right;" class="d-block w-100">
         </div>
-        <div class="carousel-item" data-bs-interval="4000">
-          <img
-            src="https://i.pinimg.com/564x/67/51/a4/6751a463e4e7f01353e6303c374a518c.jpg"
-            class="d-block w-100"
-            height="500px"
-            style="object-fit: cover"
-          />
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/564x/67/51/a4/6751a463e4e7f01353e6303c374a518c.jpg" style="height: 550px;object-fit: cover; object-position: right;" class="d-block w-100">
         </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
     <div
       id="arrow-parent"
