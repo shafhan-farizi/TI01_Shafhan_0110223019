@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TOPIku.com</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/16d156c4be.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #arrow-parent,
+      .genre {
+        position: relative;
+      }
+      .text-genre {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        padding: 10px;
+        transform: translateX(-50%);
+      }
+      #arrow-left,
+      #arrow-right {
+        position: absolute;
+        top: 220px;
+        color: #000000;
+        z-index: 1;
+      }
+      #arrow-left {
+        left: 20px;
+      }
+      #arrow-right {
+        right: 20px;
+      }
+      #genre-parent {
+        transition: 0.5s;
+      }
+      .genre-card {
+        flex-basis: 20%;
+      }
+      @media screen and (max-width: 576px) {
+        .genre {
+          width: 250px;
+        }
+        .text-header {
+          left: 20px !important;
+          width: 350px;
+        }
+        .card {
+          font-size: 0.85rem !important;
+        }
+        .fs-1 {
+          font-size: 1.5rem !important;
+        }
+        .images {
+          height: 150px !important;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .text-header {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">TOPIku.com</a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <div class="navbar-nav">
+            <a class="nav-link" href="paket.html">Paket Borong</a>
+            <a class="nav-link" href="cs.html">Customer Service</a>
+            <a class="nav-link" href="about.html">About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav
+      class="p-3"
+      style="--bs-breadcrumb-divider: '>'"
+      aria-label="breadcrumb"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">
+          <a href="index.html">Home</a>
+        </li>
+      </ol>
+    </nav>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner" style="position: relative">
+        <div
+          class="text-header border-5"
+          style="
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.4);
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            color: #ffffff;
+          "
+        >
+          <p class="fs-1">TOPIku.com</p>
+          <p>Meningkatkan maskulinitas dan feminitas secara signifikan.</p>
+          <a href="#rekomendasi" class="btn btn-primary">Pesan Sekarang!</a>
+        </div>
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img
+            src="https://i.pinimg.com/564x/e1/7a/38/e17a38dae539b7ccf11b87cc05a930d2.jpg"
+            class="d-block w-100"
+            height="500px"
+            style="object-fit: cover"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img
+            src="https://i.pinimg.com/564x/32/1e/93/321e93b38978306e4c37d5a8dbe94821.jpg"
+            class="d-block w-100"
+            height="500px"
+            style="object-fit: cover"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img
+            src="https://i.pinimg.com/564x/67/51/a4/6751a463e4e7f01353e6303c374a518c.jpg"
+            class="d-block w-100"
+            height="500px"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      id="arrow-parent"
+      class=" second-color text-center fs-1 my-5 p-2 bg-primary"
+      style="color: #ffffff;"
+    >
+      Jenis-Jenis Topi yang Tersedia
+    </div>
+    <div id="genre-parent" class="d-flex p-4 justify-content- -center" style="overflow-x: auto; scrollbar-color: #0d6efd #cff4fc;">
+      <div class="genre-card flex-grow-0 flex-shrink-0" style="flex-basis: 280px;">
+        <div class="card mx-auto genre" style="width: 200px; height: 200px">
+          <img
+            src="images/baseballs/Men's Accessories for Sale.jpg"
+            height="100%"
+            width="100%"
+            style="object-fit: cover"
+          />
+          <p class="text-genre text-center bg-info-subtle rounded-2">
+            Baseball
+          </p>
+        </div>
+      </div>
+      <div class="genre-card flex-grow-0 flex-shrink-0" style="flex-basis: 280px;">
+        <div class="card mx-auto genre" style="width: 200px; height: 200px">
+          <img
+            src="images/bucket/bucket hat.jpg"
+            height="100%"
+            width="100%"
+            style="object-fit: cover"
+          />
+          <p class="text-genre text-center bg-info-subtle rounded-2">Bucket</p>
+        </div>
+      </div>
+      <div class="genre-card flex-grow-0 flex-shrink-0" style="flex-basis: 280px;">
+        <div class="card mx-auto genre" style="width: 200px; height: 200px">
+          <img
+            src="images/fedora/0KthdBDY.jpg"
+            height="100%"
+            width="100%"
+            style="object-fit: cover"
+          />
+          <p class="text-genre text-center bg-info-subtle rounded-2">Fedora</p>
+        </div>
+      </div>
+      <div class="genre-card flex-grow-0 flex-shrink-0" style="flex-basis: 280px;">
+        <div class="card mx-auto genre" style="width: 200px; height: 200px">
+          <img
+            src="images/snapback/adidas Thrasher White & Black Snapback Hat.jpg"
+            height="100%"
+            width="100%"
+            style="object-fit: cover"
+          />
+          <p class="text-genre text-center bg-info-subtle rounded-2">
+            Snapback
+          </p>
+        </div>
+      </div>
+      <div class="genre-card flex-grow-0 flex-shrink-0" style="flex-basis: 280px;">
+        <div class="card mx-auto genre" style="width: 200px; height: 200px">
+          <img
+            src="images/trucker/2pcs Solid Trucker Hat.jpg"
+            height="100%"
+            width="100%"
+            style="object-fit: cover"
+          />
+          <p class="text-genre text-center bg-info-subtle rounded-2">Trucker</p>
+        </div>
+      </div>
+    </div>
+    <div id="rekomendasi" class="second-color text-center fs-1 my-5 bg-primary p-2" style="color: #ffffff">
+      Rekomendasi
+    </div>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/baseballs/Men's Accessories for Sale.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Baseball r6</p>
+            <p style="font-weight: bold">Rp 150.000.000</p>
+            <p>Jakarta Barat</p>
+            <p><span class="fa-solid fa-star"></span> 4.7 | 30+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/bucket/Men's Beanies, Baseball Hats, Bucket Hats + More.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Men's Beanies</p>
+            <p style="font-weight: bold">Rp 10.000.000</p>
+            <p>Jakarta Pusat</p>
+            <p><span class="fa-solid fa-star"></span> 4.7 | 30+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/trucker/Trucker Hat, Adult Trucker Hat, Mesh Trucker Hat, HTV Blanks, Blank Trucker Hat, Custom Trucker Hat, DIY Hat, Women's Trucker Hat.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Adult Hat</p>
+            <p style="font-weight: bold">Rp 150.000.000</p>
+            <p>Jakarta Barat</p>
+            <p><span class="fa-solid fa-star"></span> 4.7 | 30+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/fedora/Leather Indiana Jones Fedora Hat, Steampunk hat, Leather top hat.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Indiana Jones Hat</p>
+            <p style="font-weight: bold">Rp 150.000.000</p>
+            <p>Jakarta Barat</p>
+            <p><span class="fa-solid fa-star"></span> 4.7 | 30+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/baseballs/Topi Pria Keren Original Murah kasual Distro Baseball Terbaru Korea_Topi Origina.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Ma Bolz</p>
+            <p style="font-weight: bold">Rp 150.000.000</p>
+            <p>Jakarta Barat</p>
+            <p><span class="fa-solid fa-star"></span> 4.7 | 30+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/bucket/Stussy Bucket Hat.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Stussy Bucket</p>
+            <p style="font-weight: bold">Rp 1.000.000</p>
+            <p>Cyun Lki</p>
+            <p><span class="fa-solid fa-star"></span> 5 | 30M+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/fedora/Goorin Bros_ Guido Delgado Wool Fedora Hat.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Goorin Bros</p>
+            <p style="font-weight: bold">Rp 990.000.000</p>
+            <p>Otobuki</p>
+            <p><span class="fa-solid fa-star"></span> 10.7 | 99M+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/snapback/adidas Thrasher White & Black Snapback Hat.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Adidas Thrasher</p>
+            <p style="font-weight: bold">Rp 45.000.000</p>
+            <p>Shenyang</p>
+            <p><span class="fa-solid fa-star"></span> -9.9 | 999M+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 col-md-3 col-lg-2">
+        <div class="card">
+          <img
+            src="images/trucker/Under Armour Havoc Trucker Hat.jpg"
+            height="150px"
+            class="card-img-top"
+            style="object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-title fs-5">Under Armour</p>
+            <p style="font-weight: bold">Rp 50.000.000</p>
+            <p>Kyoto</p>
+            <p><span class="fa-solid fa-star"></span> 4.7 | 30+ terjual</p>
+            <div class="btn btn-primary">
+              Pesan <span class="fa-solid fa-cart-shopping"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="border border-primary border-2 my-4" />
+    <footer>
+      <div class="row p-3">
+        <div class="col-12 col-md-5">
+          <p class="fs-1">TOPIku.com</p>
+          <p>Meningkatkan maskulinitas dan feminitas secara signifikan.</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2791234634606!2d106.81313697582259!3d-6.357905762200385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ee9e4e532e11%3A0x5d92bf7742a7f463!2sKantor%20Pusat%20Yayasan%20BISA%20(Belajar%20Islam%20dan%20Bahasa%20Arab)!5e0!3m2!1sid!2sid!4v1701616796859!5m2!1sid!2sid"
+            width="100%"
+            height="200px"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p class="fs-1">Hubungi kami</p>
+          <div style="width: 200px">
+            <div class="d-inline-flex">
+              <span class="fa-solid fa-phone me-3"></span>
+              <p>+62 2343 3454 2323</p>
+            </div>
+            <div class="d-inline-flex">
+              <span class="fa-solid fa-envelope me-3"></span>
+              <p>sus@sus.id</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 d-flex flex-column">
+          <p class="fs-1">Informasi</p>
+          <a href="cs.html">Customer Service</a>
+          <a href="about.html">About Us</a>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="email">
+            <p>Berlangganan untuk mendapatkan info lainnya</p>
+            <div class="input-group mb-3">
+              <span class="input-group-text"
+                ><span class="fa-solid fa-envelope"></span
+              ></span>
+              <div class="form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInputGroup1"
+                  placeholder="Username"
+                />
+                <label for="floatingInputGroup1">Email</label>
+              </div>
+            </div>
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let arrow_left = document.getElementById("arrow-left");
+      let arrow_right = document.getElementById("arrow-right");
+      let genre_parent = document.getElementById("genre-parent");
+      arrow_left.addEventListener("click", () => {
+        valueGenreParent = genre_parent.style.transform;
+        if (valueGenreParent == "translateX(-20%)") {
+          genre_parent.style.transform = "";
+        }
+      });
+      arrow_right.addEventListener("click", () => {
+        valueGenreParent = genre_parent.style.transform;
+        if (valueGenreParent == "") {
+          genre_parent.style.transform = "translateX(-20%)";
+        }
+      });
+    </script>
+  </body>
+</html>
