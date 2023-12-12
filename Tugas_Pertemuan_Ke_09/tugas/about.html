@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1" />
     <title>TOPIku.com</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -10,6 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script
       src="https://kit.fontawesome.com/16d156c4be.js"
       crossorigin="anonymous"
@@ -49,15 +50,13 @@
       .image-cabang {
         width: 300px;
         height: 300px;
+        cursor: pointer;
       }
       .header-text {
         padding: 20px;
         width: 70%;
         top: 100px;
         left: 80px;
-      }
-      .image-cabang {
-        cursor: pointer;
       }
       .close {
         display: none;
@@ -91,9 +90,9 @@
           width: 150px !important;
           height: 150px !important;
         }
-        iframe.image-cabang {
-          left: 70px !important;
-        }
+        /* iframe.image-cabang {
+          left: -20px !important;
+        } */
         .header-text {
           top: 80px;
           left: 40px;
@@ -103,9 +102,9 @@
         .genre {
           width: 250px;
         }
-        .text-header {
+        .header-text {
           left: 20px !important;
-          width: 400px;
+          width: 90%;
         }
         .card {
           font-size: 0.85rem !important;
@@ -117,7 +116,7 @@
       }
     </style>
   </head>
-  <body class="overflow-x-hidden">
+  <body style="overflow-x: hidden;">
     <nav class="navbar navbar-expand-lg sticky-top bg-primary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">TOPIku.com</a>
@@ -155,16 +154,16 @@
     </nav>
     <div class="hero" style="height: 500px; background-image: url(https://i.pinimg.com/564x/aa/8e/c0/aa8ec02bdd6609ac23f47a3e2a90e4a9.jpg); background-size: cover; background-repeat: no-repeat; position: relative;">
       <div class="header-text col-6" style="position: absolute; background-color: rgba(0, 0, 0, 0.4); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); color: #ffffff;">
-        <p class="fs-1">About Us </p>
+        <p class="fs-1">About Us <span class="fa-solid fa-circle-info"></span></p>
         <hr class="border-2 col-3">
         <p class="fs-4">Perusahaan kami dibangun sejak tahun  2031bc, dan kami sudah menjual lebih dari 12 miliar topi. Perusahaan kami juga sudah memiliki 3 cabang di manca negara.</p>
       </div>
     </div>
     <div id="arrow-parent" class="d-flex">
-      <span id="arrow-left" style="font-size: 5rem ;top: 50%; transform: translateY(-50%);" class="fa-chevron-left"></span>
+      <span id="arrow-left" style="font-size: 5rem ;top: 50%; transform: translateY(-50%);" class="fa-solid fa-chevron-left"></span>
       <span id="arrow-right" style="font-size: 5rem ;top: 50%; transform: translateY(-50%);" class="fa-solid fa-chevron-right"></span>
       <div id="genre-parent" class="d-flex">
-        <div class="col-12 p-5">
+        <div class="col-12 p-md-5 p-0">
           <div class="text-center w-75 mx-auto">
             <div class="image mx-auto mt-5 mb-3 shadow-lg" style=" height: 400px; width: 400px; overflow: hidden; border-radius: 50%;">
               <img src="https://i.pinimg.com/564x/d4/ce/4e/d4ce4ee860d5802be9df68b9cced4c41.jpg" style="width: 100%; height: 100%;" alt="">
@@ -176,7 +175,7 @@
             <hr class="col-6 mx-auto border-3">
           </div>
         </div>
-        <div class="col-12 mx-auto p-5">
+        <div class="col-12 p-md-5 p-5">
           <div class="text-center w-75 mx-auto">
             <div class="image mx-auto mt-5 mb-3 shadow-lg" style="overflow: hidden; border-radius: 50%;">
               <img src="https://i.pinimg.com/564x/02/b4/f2/02b4f280752837d8b1724d45ef38442d.jpg" style="width: 100%; height: 100%;" alt="">
@@ -196,9 +195,8 @@
       <div class="col-12 col-md-6 col-lg-4 mx-auto p-5">
         <div class="text-center w-75 mx-auto">
           <div class="mx-auto mt-5 mb-3" style="position: relative;">
-            <div class="close"></div>
             <img class="image-event image-cabang" src="https://i.pinimg.com/564x/45/1a/5b/451a5b70793777e88f33249ecb39d9ae.jpg" class="shadow-lg" style="border-radius: 50%;" alt="">
-            <iframe class="image-cabang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417835.04887549765!2d135.3892293873749!3d35.09831198527327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2sKyoto%2C%20Prefektur%20Kyoto%2C%20Jepang!5e0!3m2!1sid!2sid!4v1701670180436!5m2!1sid!2sid" style="border:0; border-radius: 50%; position: absolute; left: 0; top: -20px; z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="image-cabang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417835.04887549765!2d135.3892293873749!3d35.09831198527327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2sKyoto%2C%20Prefektur%20Kyoto%2C%20Jepang!5e0!3m2!1sid!2sid!4v1701670180436!5m2!1sid!2sid" style="border:0; border-radius: 50%; position: absolute; left: -30px; top: -20px; z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="card-body">
             <p class="card-text">Cabang perusahaan yang pertama kali dibangun pada tahun 201bc yang bertempat di Kyoto - Jepang.</h4>
@@ -209,9 +207,8 @@
       <div class="col-12 col-md-6 col-lg-4 p-5">
         <div class="text-center w-75 mx-auto">
           <div class="mx-auto mt-5 mb-3" style="position: relative;">
-            <div class="close"></div>
             <img class="image-event image-cabang" src="https://i.pinimg.com/564x/e0/ea/fa/e0eafaba8952d72fed4bb3acfc5ac1c9.jpg" class="shadow-lg" style="border-radius: 50%;" alt="">
-            <iframe class="image-cabang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761371.2203897032!2d122.77713813072104!3d41.8044697909036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5e253c413a1334b7%3A0x5499e4f0ce929166!2sShenyang%2C%20Liaoning%2C%20Tiongkok!5e0!3m2!1sid!2sid!4v1701671205018!5m2!1sid!2sid" style="border:0; border-radius: 50%; position: absolute; left: 0; top: -20px; z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="image-cabang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761371.2203897032!2d122.77713813072104!3d41.8044697909036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5e253c413a1334b7%3A0x5499e4f0ce929166!2sShenyang%2C%20Liaoning%2C%20Tiongkok!5e0!3m2!1sid!2sid!4v1701671205018!5m2!1sid!2sid" style="border:0; border-radius: 50%; position: absolute; left: -30px; top: -20px; z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="card-body">
             <p class="card-text col-10 mx-auto">Cabang perusahaan kedua yang dibangun setelah 5 dekade dari pembangunan cabang pertama yang bertempat di Shenyang - Korea Utara.</p>
@@ -222,9 +219,8 @@
       <div class="col-12 col-md-6 col-lg-4 p-5">
         <div class="text-center w-75 mx-auto">
           <div class="mx-auto mt-5 mb-3" style="position: relative;">
-            <div class="close"></div>
             <img class="image-event image-cabang" src="https://i.pinimg.com/564x/9d/21/95/9d2195a3866be270de42fdf342c41315.jpg" class="shadow-lg" style="border-radius: 50%;" alt="">
-            <iframe class="image-cabang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d770803.0598608549!2d28.35281692786124!3d41.00447954543034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2sIstanbul%2C%20Provinsi%20%C4%B0stanbul%2C%20Turki!5e0!3m2!1sid!2sid!4v1701671735322!5m2!1sid!2sid" style="border:0; border-radius: 50%; position: absolute; left: 0; top: -20px; z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="image-cabang" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d770803.0598608549!2d28.35281692786124!3d41.00447954543034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2sIstanbul%2C%20Provinsi%20%C4%B0stanbul%2C%20Turki!5e0!3m2!1sid!2sid!4v1701671735322!5m2!1sid!2sid" style="border:0; border-radius: 50%; position: absolute; left: -30px; top: -20px; z-index: -1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="card-body">
             <p class="card-text col-10 mx-auto">Cabang perusahaan kedua yang dibangun setelah 243 dekade dari pembangunan cabang pertama yang bertempat di Istanbul - Turki.</p>
@@ -301,19 +297,20 @@
       let close = document.getElementsByClassName('close')
       for(let i = 0; i < image_event.length; i++) {
         image_event[i].addEventListener('click', () => {
-          image_event[i].previousElementSibling.style.display = 'block';
-          image_event[i].nextElementSibling.style.zIndex = 1;
-          image_event[i].nextElementSibling.style.opacity = 1;
+          if (window.getComputedStyle(image_event[i].nextElementSibling).opacity == 0.2) {
+            image_event[i].nextElementSibling.style.zIndex = 1;
+            image_event[i].nextElementSibling.style.opacity = 1;
+            console.log('GO');
+          } else {
+              image_event[i].nextElementSibling.style.zIndex = -1;
+              image_event[i].nextElementSibling.style.opacity = 0.2;
+          }
+          // if (image_event[i].nextElementSibling.style.opacity == 1){
+          //   console.log('NAH');
+          // }
         })
       }
-      for(let x = 0; x < close.length; x++) {
-        close[x].addEventListener('click', () => {
-          close[x].nextElementSibling.nextElementSibling.style.zIndex = -1;
-          close[x].nextElementSibling.nextElementSibling.style.opacity = 0.2;
-          close[x].style.display = 'none'
-        })
-      }
-
+  
       arrow_left.addEventListener("click", () => {
         valueGenreParent = genre_parent.style.transform;
         console.log('awoj');
