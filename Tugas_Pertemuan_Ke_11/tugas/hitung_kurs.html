@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Kurs Dollar</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 35px;
+        }
+        button {
+            position: relative;
+            display: block;
+            padding: 10px 20px;
+            background-color: white;
+        }
+        button::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            top: 5px;
+            left: 0;
+            z-index: -1;
+        }
+        button:active {
+            top: 5px;
+        }
+        button:active::after {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Hitung Kurs Rupiah ke Dollar</h1>
+        <label>Masukkan sejumlah rupiah : <input type="text" id="rupiah"></label>
+        <p>Rupiah dalam Dollar : $<span id="kurs-dollar">0</span></p>
+        <button onclick="hitung_kurs()">Hitung</button>
+    </div>
+    <script>
+        function hitung_kurs() {
+
+            let rupiah = document.getElementById('rupiah').value
+
+            let nilai_kurs = 14650
+
+            document.getElementById('kurs-dollar').innerText = (rupiah / 14650).toFixed(2)
+        }
+    </script>
+</body>
+</html>

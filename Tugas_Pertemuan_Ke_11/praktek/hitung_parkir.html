@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hitung Parkir</title>
+		<style>
+			.box {
+				border: 1px solid black;
+				box-sizing: border-box;
+				padding: 35px;
+			}
+			button {
+				position: relative;
+				display: block;
+				padding: 10px 20px;
+				background-color: white;
+			}
+			button::after {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				top: 5px;
+				left: 0;
+				z-index: -1;
+			}
+			button:active {
+				top: 5px;
+			}
+			button:active::after {
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h1>Hitung Biaya Parkir</h1>
+			<div>
+				<label>Masukkan jam masuk : <input type="text" id="jam-masuk" /></label>
+			</div>
+			<br />
+			<div>
+				<label
+					>Masukkan jam keluar : <input type="text" id="jam-keluar"
+				/></label>
+			</div>
+			<p>Lama parkir : <span id="lama-parkir">0</span> Jam</p>
+			<p>Biaya parkir : <span id="biaya">0</span></p>
+			<button onclick="hitung_parkir()">Hitung</button>
+		</div>
+		<script>
+			function hitung_parkir() {
+				let jam_masuk = document.getElementById("jam-masuk").value;
+				let jam_keluar = document.getElementById("jam-keluar").value;
+
+				let lama_parkir = jam_keluar - jam_masuk;
+
+				document.getElementById("lama-parkir").textContent = lama_parkir;
+
+				document.getElementById("biaya").textContent =
+					lama_parkir > 2 ? 3000 + (lama_parkir - 2) * 1000 : 3000;
+			}
+		</script>
+	</body>
+</html>
