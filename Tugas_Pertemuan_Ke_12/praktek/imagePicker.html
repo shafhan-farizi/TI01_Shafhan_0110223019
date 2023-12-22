@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select onchange="ubahGambar(this)" id="animalSelect">
+        <option selected disabled>Pilih Gambar</option>
+        <option value="ayam.jfif" selected>Ayam</option>
+        <option value="badak.jfif">Badak</option>
+        <option value="harimau.jfif">Harimau</option>
+        <option value="kucing.jfif">Kucing</option>
+        <option value="panda.jfif">Panda</option>
+        <option value="zebra.jfif">Zebra</option>
+    </select>
+
+    <img src="img/ayam.jfif" id="image">
+
+    <script>
+        function ubahGambar(e) {
+            const image = document.getElementById('image')
+            
+            image.src = 'img/' + e.value
+        }
+
+
+    </script>
+</body>
+</html>
