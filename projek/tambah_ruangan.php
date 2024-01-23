@@ -25,6 +25,7 @@
 			href="assets/plugins/fontawesome-free/css/all.min.css"
 		/>
 		<link rel="stylesheet" href="assets/css/adminlte.min.css" />
+		<link rel="icon" href="assets/img/logo.png" type="image/x-icon">
 		<style>
 			@media screen and (max-width: 1199px) {
 				.col-xl-4.col-md-12 {
@@ -226,6 +227,7 @@
 													<option value="Ruang Rapat">Ruang Rapat</option>
 													<option value="Ruang Seminar">Ruang Seminar</option>
 													<option value="Lab Komputer">Lab Komputer</option>
+													<option value="Lapangan Olahraga">Lapangan Olahraga</option>
 												</select>
 											</div>
 										</td>

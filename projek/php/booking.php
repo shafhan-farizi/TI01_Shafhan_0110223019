@@ -8,7 +8,7 @@
     $hp = $_POST['hp'];
     $email = $_POST['email'];
     
-    $result_peminjam = '=' . $peminjam . '/' . $kontak . '/' . $hp . '/' . $email . '/';
+    $result_peminjam = '=' . $peminjam . '/' . $kontak . '/' . $hp . '/' . $email;
     $result_jadwal = '=' . $peminjam . '/' . $nama_ruangan . '/' . $deskripsi_kegiatan . '/' . $fasilitas . '/' . $tanggal . '/' . $kontak . '/' . $hp . '/' . $email;
 
 

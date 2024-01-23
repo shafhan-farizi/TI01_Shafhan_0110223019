@@ -15,14 +15,12 @@
     for($i=0; $i<count($file); $i++) {
       $getContent = explode('/', $file[$i]);
   
-      $id = $getContent[0];
-      $nama = $getContent[1];
-      $kontak = $getContent[2];
-      $hp = $getContent[3];
-      $email = $getContent[4];
-      $tanggal = $getContent[5];
-  
-      $person[] = [$id, $nama, $kontak, $hp, $email, $tanggal];
+      $nama = $getContent[0];
+      $kontak = $getContent[1];
+      $hp = $getContent[2];
+      $email = $getContent[3];
+
+      $person[] = [$nama, $kontak, $hp, $email];
     }
   } else {
     $file = false;
@@ -61,6 +59,7 @@
   <link rel="stylesheet" href="assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="assets/css/adminlte.min.css">
+  <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
   <style>
     @media screen and (max-width: 1199px) {
       .col-xl-4.col-md-12 {
@@ -130,6 +129,10 @@
     </nav>
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <a href="index.php" class="brand-link">
+        <img src="assets/img/logo.png" alt="eRuang Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light ml-1">eRuang</span>
+      </a>
       <div class="sidebar mt-4">
         <div class="form-inline">
           <div class="input-group" data-widget="sidebar-search">
@@ -182,7 +185,7 @@
                 <p>Ruangan</p>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item menu-open">
               <a href="daftar_peminjaman.php" class="nav-link">
                 <i class="nav-icon far fa-id-card"></i>
                 <p>Peminjam</p>
@@ -262,10 +265,10 @@
                       for($i=0; $i<count($person); $i++) { ?>
                       <tr>
                         <td><?= $i+1 ?></td>
+                        <td><?= $person[$i][0] ?></td>
                         <td><?= $person[$i][1] ?></td>
                         <td><?= $person[$i][2] ?></td>
                         <td><?= $person[$i][3] ?></td>
-                        <td><?= $person[$i][4] ?></td>
                         <td>swasta</td>
                         <td>
                           <a href="php/delete.php?nama_peminjam=<?= $person[$i][0] ?>" class="btn btn-danger">Delete</a>

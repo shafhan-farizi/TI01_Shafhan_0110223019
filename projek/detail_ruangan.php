@@ -46,6 +46,7 @@
 		/>
 		<!-- Theme style -->
 		<link rel="stylesheet" href="assets/css/adminlte.min.css" />
+		<link rel="icon" href="assets/img/logo.png" type="image/x-icon">
 		<style>
 			@media screen and (max-width: 1199px) {
 				.col-xl-4.col-md-12 {

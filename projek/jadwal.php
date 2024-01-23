@@ -16,17 +16,16 @@
     for($i=0; $i<count($file); $i++) {
       $getContent = explode('/', $file[$i]);
   
-      $id = $getContent[0];
-      $nama = $getContent[1];
-      $nama_ruangan = $getContent[2];
-      $deskripsi_kegiatan = $getContent[3];
-      $fasilitas = $getContent[4];
-      $tanggal = $getContent[5];
-      $kontak = $getContent[6];
-      $hp = $getContent[7];
-      $email = $getContent[8];
-  
-      $jadwal[] = [$id, $nama, $nama_ruangan, $deskripsi_kegiatan, $fasilitas, $tanggal, $kontak, $hp, $email];
+      $nama = $getContent[0];
+      $nama_ruangan = $getContent[1];
+      $deskripsi_kegiatan = $getContent[2];
+      $fasilitas = $getContent[3];
+      $tanggal = $getContent[4];
+      $kontak = $getContent[5];
+      $hp = $getContent[6];
+      $email = $getContent[7];
+
+      $jadwal[] = [$nama, $nama_ruangan, $deskripsi_kegiatan, $fasilitas, $tanggal, $kontak, $hp, $email];
     }
   } else {
     $file = false;
@@ -65,6 +64,7 @@
   <link rel="stylesheet" href="assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="assets/css/adminlte.min.css">
+  <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
   <style>
     @media screen and (max-width: 1199px) {
       .col-xl-4.col-md-12 {
@@ -134,6 +134,10 @@
     </nav>
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <a href="index.php" class="brand-link">
+        <img src="assets/img/logo.png" alt="eRuang Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light ml-1">eRuang</span>
+      </a>
       <div class="sidebar mt-4">
         <div class="form-inline">
           <div class="input-group" data-widget="sidebar-search">
@@ -192,7 +196,7 @@
                 <p>Peminjam</p>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item menu-open">
               <a href="jadwal.php" class="nav-link">
                 <i class="nav-icon fas fa-clock"></i>
                 <p>Jadwal</p>
@@ -267,22 +271,22 @@
                       for($i=0; $i<count($jadwal); $i++) { ?>
                       <tr>
                         <td><?= $i+1 ?></td>
+                        <td><?= $jadwal[$i][0] ?></td>
                         <td><?= $jadwal[$i][1] ?></td>
                         <td><?= $jadwal[$i][2] ?></td>
-                        <td><?= $jadwal[$i][3] ?></td>
                         <td>
                           <ul>
                             <?php
-                            $fasilitas = explode('-', $jadwal[$i][4]); 
+                            $fasilitas = explode('-', $jadwal[$i][3]); 
                             for($x=0; $x<count($fasilitas); $x++) { ?>
                             <li><?= $fasilitas[$x] ?></li>
                             <?php } ?>
                           </ul>
                         </td>
+                        <td><?= $jadwal[$i][4] ?></td>
                         <td><?= $jadwal[$i][5] ?></td>
                         <td><?= $jadwal[$i][6] ?></td>
                         <td><?= $jadwal[$i][7] ?></td>
-                        <td><?= $jadwal[$i][8] ?></td>
                       </tr>
                       <?php }
                       } else { ?>

@@ -1,5 +1,23 @@
 <?php
 	session_start();
+
+	$file = explode('=', file_get_contents('data/ruangan.txt'));
+	array_shift($file);
+	if($file) {
+		for($i=0; $i<count($file); $i++) {
+			if($i == 3) {
+				break;
+			}
+			$getContent = explode('/', $file[$i]);
+	
+			$nama = $getContent[0];
+			$foto_ruangan = $getContent[4];
+	
+			$ruangan[] = [$nama, $foto_ruangan];
+		}
+	} else {
+		$file = false;
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +42,7 @@
 		/>
 		<!-- Theme style -->
 		<link rel="stylesheet" href="assets/css/adminlte.min.css" />
+		<link rel="icon" href="assets/img/logo.png" type="image/x-icon">
 		<style>
 			@media screen and (max-width: 1199px) {
 				.col-xl-4.col-md-12 {
@@ -155,14 +174,17 @@
 							</div>
 						</div>
 						<div class="border rounded mt-4">
-							<h1 class="text-center">Rekomendasi Ruangan</h1>
+							<h1 class="text-center mt-4">Rekomendasi Ruangan</h1>
 							<div class="row p-2">
+							<?php 
+									if($file) {
+									for($i=0; $i<count($ruangan); $i++) { ?>
 								<div class="col-lg-4 col-md-6">
 									<div class="col-12">
-										<h4 class="text-center">Meeting Room Garuda</h4>
+										<h4 class="text-center"><?= $ruangan[$i][0] ?></h4>
 										<div class="card">
 											<img
-												src="assets/img/meeting-room.jpg"
+												src="assets/img/uploads/<?= explode('|', $ruangan[$i][1])[0] ?>"
 												class="card-img-top rounded"
 												alt="..." height="250px" width="100px"
 											/>
@@ -175,42 +197,12 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="col-12">
-										<h4 class="text-center">Conference Room Nuri</h4>
-										<div class="card">
-											<img
-												src="assets/img/conference-room.jpg"
-												class="card-img-top rounded"
-												alt="..." height="250px" width="100px"
-											/>
-											<div class="card-body">
-												<div class="card-text d-flex justify-content-between">
-													<p><i class="fa fa-solid fa-user"></i> 14</p>
-													<p>Rp. 500k/Jam</p>
-												</div>
-											</div>
-										</div>
-									</div>
+								<?php } 
+								} else { ?>
+								<div class="col-12">
+									<h1 class="text-center">Data Kosong</h1>
 								</div>
-								<div class="col-lg-4 col-md-12">
-									<div class="col-12">
-										<h4 class="text-center">Aula Cendrawasih</h4>
-										<div class="card">
-											<img
-												src="assets/img/aula-room.jpg"
-												class="card-img-top rounded"
-												alt="..." height="250px" width="100px"
-											/>
-											<div class="card-body">
-												<div class="card-text d-flex justify-content-between">
-													<p><i class="fa fa-solid fa-user"></i> 21</p>
-													<p>Rp. 1000k/Jam</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								<?php } ?>
 							</div>
 						</div>
 					</div>
@@ -222,6 +214,7 @@
 								<li class="list-group-item">Ruang Rapat</li>
 								<li class="list-group-item">Ruang Seminar</li>
 								<li class="list-group-item">Lab Komputer</li>
+								<li class="list-group-item">Lapangan Olahraga</li>
 							</ul>
 						</div>
 					</div>

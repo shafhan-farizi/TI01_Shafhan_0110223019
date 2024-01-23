@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Tetang Kami - eRuang</title>
+		<title>Tentang Kami - eRuang</title>
 		<!-- Google Font: Source Sans Pro -->
 		<link
 			rel="stylesheet"
@@ -24,7 +24,16 @@
 		/>
 		<!-- Theme style -->
 		<link rel="stylesheet" href="assets/css/adminlte.min.css" />
+		<link rel="icon" href="assets/img/logo.png" type="image/x-icon">
 		<style>
+			.image-profile {
+				border: 3px solid #adb5bd;
+				border-radius: 50%;
+				margin: 0 auto;
+				padding: 3px;
+				width: 100px;
+				height: 100px;
+			}
 			@media screen and (max-width: 1199px) {
 				.col-xl-4.col-md-12 {
 					margin-top: 18px;
@@ -121,7 +130,7 @@
                                                 <div class="card card-primary card-outline">
                                                     <div class="card-body box-profile">
                                                       <div class="text-center">
-                                                        <img class="profile-user-img img-fluid img-circle" src="assets/img/user4-128x128.jpg" alt="User profile picture">
+                                                        <img class="image-profile" src="assets/img/shafhan-photo.png" width="200px" height="200px" alt="User profile picture">
                                                       </div>
                                       
                                                       <h3 class="profile-username text-center">Shafhan Farizi - Ketua</h3>
@@ -140,7 +149,7 @@
                                                 <div class="card card-primary card-outline">
                                                     <div class="card-body box-profile">
                                                       <div class="text-center">
-                                                        <img class="profile-user-img img-fluid img-circle" src="assets/img/user4-128x128.jpg" alt="User profile picture">
+                                                        <img class="image-profile" src="assets/img/galang-photo.jpg" alt="User profile picture">
                                                       </div>
                                       
                                                       <h3 class="profile-username text-center">Galang Saputra</h3>
@@ -159,7 +168,7 @@
                                                 <div class="card card-primary card-outline">
                                                     <div class="card-body box-profile">
                                                       <div class="text-center">
-                                                        <img class="profile-user-img img-fluid img-circle" src="assets/img/user4-128x128.jpg" alt="User profile picture">
+                                                        <img class="image-profile" src="assets/img/nicky-photo.jpeg" alt="User profile picture">
                                                       </div>
                                       
                                                       <h3 class="profile-username text-center">Nicky Fajaelani</h3>
@@ -178,7 +187,7 @@
                                                 <div class="card card-primary card-outline">
                                                     <div class="card-body box-profile">
                                                       <div class="text-center">
-                                                        <img class="profile-user-img img-fluid img-circle" src="assets/img/user4-128x128.jpg" alt="User profile picture">
+                                                        <img class="image-profile" src="assets/img/nurmayanti-photo.jpeg" alt="User profile picture">
                                                       </div>
                                       
                                                       <h3 class="profile-username text-center">Nurmayanti</h3>
@@ -197,7 +206,7 @@
                                                 <div class="card card-primary card-outline">
                                                     <div class="card-body box-profile">
                                                       <div class="text-center">
-                                                        <img class="profile-user-img img-fluid img-circle" src="assets/img/user4-128x128.jpg" alt="User profile picture">
+                                                        <img class="image-profile" src="assets/img/rijal-photo.jpeg" alt="User profile picture">
                                                       </div>
                                       
                                                       <h3 class="profile-username text-center">M rizal fauzi</h3>
